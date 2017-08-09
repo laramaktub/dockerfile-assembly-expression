@@ -216,9 +216,7 @@ RUN git clone git://github.com/matplotlib/matplotlib.git &&\
 RUN cd /tmp
 RUN wget https://launchpad.net/ubuntu/+archive/primary/+files/hisat2_2.0.5.orig.tar.xz
 RUN tar -xvf hisat2_2*tar.xz
-RUN cd hisat2-2.0.5 &&\
-    make
-RUN cp -p hisat2 hisat2-* /usr/bin
+RUN cd hisat2-2.0.5 && make &&  cp -p hisat2 hisat2-* /usr/bin
 
 
 #######################################################################
